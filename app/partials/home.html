@@ -1,0 +1,21 @@
+<h1>{{index.message}}</h1>
+<ul>
+    <li ng-repeat="task in index.tasks">
+        {{task.taskName}}
+        <ul>
+            <li>Description: {{task.taskDescription}}</li>
+        </ul>
+    </li>
+</ul>
+<form ng-submit="index.addTask()">
+    <md-input-container class="md-block" flex-gt-sm>
+        <label>Task Name</label>
+        <input ng-model="index.newTask">
+    </md-input-container>
+    <md-input-container class="md-block" flex-gt-sm>
+        <label>Task Description</label>
+        <textarea ng-model="index.taskDescription"></textarea>
+    </md-input-container>
+    <md-button type="submit" class="md-raised md-primary">Add</md-button>
+</form>
+<md-button ng-click="index.saveData()" class="md-raised md-primary">Save Data</md-button>

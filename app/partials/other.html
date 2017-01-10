@@ -1,0 +1,12 @@
+<form ng-submit="other.showAlert()">
+<div layout-gt-sm="row">
+<md-input-container class="md-block" flex-gt-sm>
+    <label>Type your text</label>
+    <input ng-model="other.textInput">
+     <md-button type="submit" class="md-raised md-primary">Show Alert</md-button>
+</md-input-container>
+</div>
+</form>
+<md-button ng-click="other.doPost()" class="md-raised md-primary">Get Request</md-button>
+
+{{other.data.url}} || {{other.data.origin}}
